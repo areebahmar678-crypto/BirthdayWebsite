@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Saim | The OG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff2e63;
+            --accent: #08d9d6;
+            --dark: #1a1a2e;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Particles & Balloons Background */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #252a34 0%, #1a1a2e 100%);
+        }
+
+        .date-badge {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid var(--accent);
+            font-weight: bold;
+            z-index: 100;
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20% 70% 70% 30% / 30% 30% 70% 70%;
+            border: 8px solid var(--primary);
+            object-fit: cover;
+            margin-bottom: 30px;
+            animation: morph 8s ease-in-out infinite;
+            box-shadow: 0 0 50px rgba(255, 46, 99, 0.3);
+        }
+
+        @keyframes morph {
+            0% { border-radius: 20% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 20% 30% 70% / 70% 70% 30% 30%; }
+            100% { border-radius: 20% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+
+        .main-message {
+            max-width: 800px;
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 24px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 50px;
+        }
+
+        .photo-card {
+            background: var(--glass);
+            padding: 15px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .quote-block {
+            margin-top: 100px;
+            max-width: 700px;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Floating Elements */
+        .balloon {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-100px) rotate(10deg); }
+        }
+
+        .footer {
+            padding: 50px;
+            text-align: center;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .hero-img { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+<audio src="your-song.mp3" autoplay loop></audio>
+
+    <div class="date-badge">7 MARCH 2009 - 2026</div>
+
+    <div id="bg-canvas"></div>
+
+    <section>
+        <div class="balloon" style="left: 10%; top: 20%;">🎈</div>
+        <div class="balloon" style="right: 15%; top: 30%;">✨</div>
+        <div class="balloon" style="left: 20%; bottom: 10%;">🎂</div>
+        
+        <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342918069977148/Saim5.jpeg?ex=69a46a4f&is=69a318cf&hm=2f4f29de60eb3763810d28d2ba61264f578694b78866d7e44d946fe681b98e08&" alt="Saim" class="hero-img">
+        
+        <h1>Happy Birthday Saim <br>OG Richies Pookie</h1>
+        
+        <div class="main-message">
+            "Happy 17th Birthday Saim the OG Bro 😝😝 I literally can't believe it’s been almost 12 years of us being together. Bro always stay by my side like this. Honestly you have been there for me through all my highs and lows 📈📉 Bhai just always stay happy, enjoy yourself and become a successful man Ameen 🤲🫶🏻. <br><br>
+            And bro we’re gonna keep causing chaos on Discord as a duo or some stupid peeps like Basit or Naseem except Wali or Hunter because they are goats..... just like always 🎮. But listen you're gonna have to give me a treat I don’t care how but it’s happening! Just always stay safe and sound, my prayers are always with you. 🙏<br><br>
+            Though lately you’ve started acting like you’re at a Diddy party... but don’t worry I will fix that for you IYKYK 😉🚫😂🤣. Just enjoy your birthday party hard and never forget us. We’re always with you. Once again Happy Birthday my bbg nigga Saim 🎂🥳👑🫀💋🫶🏻😝😋"
+        </div>
+    </section>
+
+    <section>
+        <h2 style="font-size: 2.5rem; margin-bottom: 40px;">The Journey of a Legend 👑</h2>
+        <div class="gallery">
+            <div class="photo-card">
+                <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342918846185653/Saim7.jpeg?ex=69a46a4f&is=69a318cf&hm=dcad9c3da5588d81607d7aaca206ced619c692ef91e21d5b4678b4274f0b0a70&" alt="Karaoke King">
+                <p style="margin-top:10px ">The Karaoke King 🎤💙</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342918477091099/Saim6.jpeg?ex=69a46a4f&is=69a318cf&hm=17fe7e3ffb81b25b29d1ab1d21334f37258f9f5374ca283f21d8d201c5e3797d&" alt="School Days">
+                <p style="margin-top:10px;">School Days with the Bro 🎒✨</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342919672205402/Saim2.jpeg?ex=69a46a4f&is=69a318cf&hm=67efb2c90f72010375e28594b50b1ec6a238b294cfcbc8d37169c8de807e7ce9&" alt="The Fit">
+                <p style="margin-top:10px;">Always staying Classy 👔🔥</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342919215153314/Saim1.jpeg?ex=69a46a4f&is=69a318cf&hm=3ee4c18e3c053530b2172824633ac1eff4d5984f43d0a2f541e6707949062ee6&" alt="The Gains">
+                <p style="margin-top:10px;">Marching into 17 with Gains 💪⚡</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342920368722030/Saim4.jpeg?ex=69a46a4f&is=69a318cf&hm=6f536dc2408c23d565e75d1d02dc0055b4a6d0768c8412317bad86799d9c5afd&" alt="Gym Boii">
+                <p style="margin-top:10px;">Gym Lover the Saim😍💋</p>
+            </div>
+            <div class="photo-card">
+                <img src="https://cdn.discordapp.com/attachments/1462216431948271844/1477342920028852234/Saim3.jpeg?ex=69a46a4f&is=69a318cf&hm=1cf69df9123b0ee8ae635f2ac4b0df51ab34c7ba9a71b47097d5e8b757d3ed17&" alt="Aesthtic Guy">
+                <p style="margin-top:10px;">Aesthetics on its peak😝🫶🏻👀</p>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            "To the boy who turns 17 today, Saim: May your year be as bright as your future and as legendary as our Discord calls! ❤️"
+        </div>
+    </section>
+
+    <section>
+        <div class="main-message" style="border-left: 5px solid var(--accent);">
+            <h3>Why Saim is the GOAT 🐐</h3>
+            <p style="margin-top: 20px;">
+                Turning 17 is more than just a number it's the start of the "Richie","Owner" or "Head Admin" era Saim you've grown from a kid to a man right before my eyes. 12 years of secrets, gaming, and pure chaos cannot be summed up in a paragraph, but your loyalty can. 
+                <br><br>
+                As you hit your 17th Birthday on March 7th remember that the world is yours to take. From the long nights on Discord to the real life struggles, you've remained the same "OG" soul. Stay brilliant, stay ambitious, and keep that heart of gold (even if you act suspicious lately 😂). 
+                <br><br>
+                May this 17th year bring you closer to every dream you've ever shared with me. We are a duo that can't be broken. Happy Birthday Brother Saim 🎂🫀
+            </p>
+        </div>
+        
+        <div class="balloon" style="right: 5%; bottom: 20%;">🎮</div>
+        <div class="balloon" style="left: 5%; bottom: 30%;">📈</div>
+    </section>
+
+    <div class="footer">
+        Created for the One and Only Saim | 2026 OG Records
+    </div>
+
+    <script>
+        // Simple sparkle effect for the background
+        const bg = document.getElementById('bg-canvas');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.style.position = 'absolute';
+            star.style.width = '2px';
+            star.style.height = '2px';
+            star.style.background = '#fff';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.opacity = Math.random();
+            bg.appendChild(star);
+        }
+    </script>
+</body>
+</html>
